@@ -37,17 +37,17 @@ public class GeneralUI : MonoBehaviour {
 	}
 
 
-	void OnGUI()
-	{
+	//void OnGUI()
+	//{
 
-		GUI.Label(new Rect(25,300,160,30), earthTypeLabel.ToUpper());
-		activatedPlanet = GUI.HorizontalScrollbar (new Rect (25, 330, 160, 30), activatedPlanet, 1, 0, earths.Count);
-		if (!earths [(int)activatedPlanet].activeInHierarchy) {
-						earths [(int)activatedPlanet].SetActive (true);
-				}
+	//	GUI.Label(new Rect(25,300,160,30), earthTypeLabel.ToUpper());
+	//	activatedPlanet = GUI.HorizontalScrollbar (new Rect (25, 330, 160, 30), activatedPlanet, 1, 0, earths.Count);
+	//	if (!earths [(int)activatedPlanet].activeInHierarchy) {
+	//					earths [(int)activatedPlanet].SetActive (true);
+	//			}
 
 
-	}
+	//}
 	
 
 }

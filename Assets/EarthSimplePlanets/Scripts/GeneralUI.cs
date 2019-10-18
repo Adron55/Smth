@@ -15,26 +15,26 @@ public class GeneralUI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		activatedPlanet = 0;
+		//activatedPlanet = 0;
 
-		earths = new List<GameObject> ();
-		foreach (Transform earth in GameObject.FindGameObjectWithTag ("Earth").transform) {
-			earths.Add(earth.gameObject);
-				}
+		//earths = new List<GameObject> ();
+		////foreach (Transform earth in GameObject.FindGameObjectWithTag ("Earth").transform) {
+		////	earths.Add(earth.gameObject);
+		////}
 
-		earths [(int)currentActivatedPlanet].SetActive (true);
+		//earths [(int)currentActivatedPlanet].SetActive (true);
 	}
 
-	void Update()
-	{
+	//void Update()
+	//{
 
-		if ((int)currentActivatedPlanet != (int)activatedPlanet) {
-			earths[(int)currentActivatedPlanet].SetActive(false);			
+	//	//if ((int)currentActivatedPlanet != (int)activatedPlanet) {
+	//	//	earths[(int)currentActivatedPlanet].SetActive(false);			
 
-				currentActivatedPlanet = (int)activatedPlanet;
-				} 
+	//	//		currentActivatedPlanet = (int)activatedPlanet;
+	//	//		} 
 
-	}
+	//}
 
 
 	//void OnGUI()

@@ -54,17 +54,28 @@ public class SpawnDebrisModels : MonoBehaviour
             JsonDataToPos jsonDataToPos = new JsonDataToPos();
             jsonDataToPos.name = jsonData[i]["name"].ToString();
             jsonDataToPos.position = placeObjectToPos((float)Convert.ToDouble(jsonData[i]["lat"].ToString()), (float)Convert.ToDouble(jsonData[i]["lon"].ToString()));
-            jsonDataToPosComp.Add(jsonDataToPos);
+            //if (checkDataDistance(jsonDataToPos.position))
+           // {
+                jsonDataToPosComp.Add(jsonDataToPos);
+          //  }
         }
+        Debug.Log(jsonDataToPosComp.Count);
         f = true;
         inst();
 
         return jsonDataToPosComp;
     }
 
-    public void checkDataDistance()
+    public bool checkDataDistance(Vector3 newComer)
     {
-
+        for(int i = 0; i < jsonDataToPosComp.Count; i++)
+        {
+            if (Vector3.Distance(newComer, jsonDataToPosComp[i].position)<5)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     private void inst()

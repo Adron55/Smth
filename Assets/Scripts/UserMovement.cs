@@ -1,24 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class UserMovement : MonoBehaviour
 {
     public GameObject center;
     public GameObject ship;
-    
-    
+
+
+    public float maxHeight = 20, minHeight = 10;
+
+
     public float speed = 0.1f;
-    public float defaultMoveSpeed = 4; 
+    public float defaultMoveSpeed = 4;
 
+
+    private float tempFloat;
     private Vector3 moveVec;
-
+    private Vector3 tempVec;
 
 
     // Start is called before the first frame update
     private void Start()
     {
-       moveVec = new Vector3(0, 0, defaultMoveSpeed);
+        moveVec = new Vector3(0, 0, defaultMoveSpeed);
     }
 
 
@@ -38,15 +41,20 @@ public class UserMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W))
         {
-            ship.transform.position += new Vector3(speed*Time.deltaTime, 0, 0);
+            tempFloat = ship.transform.localPosition.x + speed * Time.deltaTime;
+            ship.transform.localPosition = new Vector3(Mathf.Clamp(tempFloat, minHeight, maxHeight), ship.transform.localPosition.y, ship.transform.localPosition.z);
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            ship.transform.position += new Vector3(-speed * Time.deltaTime, 0, 0);
+            tempFloat = ship.transform.localPosition.x - speed * Time.deltaTime;
+            ship.transform.localPosition = new Vector3(Mathf.Clamp(tempFloat, minHeight, maxHeight), ship.transform.localPosition.y, ship.transform.localPosition.z);
         }
+
+
         moveVec = new Vector3(0, 0, defaultMoveSpeed);
-        center.transform.eulerAngles += moveVec*Time.deltaTime;
+        center.transform.eulerAngles += moveVec * Time.deltaTime;
+
 
     }
 }

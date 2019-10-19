@@ -12,7 +12,7 @@ public class UserMovement : MonoBehaviour
 
     public float speed = 0.1f;
     public float defaultMoveSpeed = 4;
-
+    public float norm = 0.1f;
 
     private float tempFloat;
     private Vector3 moveVec;
@@ -23,6 +23,7 @@ public class UserMovement : MonoBehaviour
     private void Start()
     {
         moveVec = new Vector3(0, 0, defaultMoveSpeed);
+        Debug.Log(holder.transform.localRotation.x);
     }
 
 
@@ -38,7 +39,13 @@ public class UserMovement : MonoBehaviour
                 holder.transform.Rotate(1, 0, 0, Space.Self);
             }
         }
-
+        else if (holder.transform.localRotation.x > 0f)
+        {
+            Debug.Log("here");
+            holder.transform.Rotate(Mathf.Min(-1, -holder.transform.localRotation.x), 0, 0, Space.Self);
+        }
+        
+       
         if (Input.GetKey(KeyCode.A))
         {
             center.transform.eulerAngles += new Vector3(0, speed, 0) * Time.deltaTime;
@@ -46,9 +53,12 @@ public class UserMovement : MonoBehaviour
             if(holder.transform.localRotation.x > -0.1f)
             {
                 holder.transform.Rotate(-1, 0, 0, Space.Self);
-
             }
-
+        }
+        else if (holder.transform.localRotation.x < 0f)
+        {
+            Debug.Log("here");
+            holder.transform.Rotate(Mathf.Max(1, -holder.transform.localRotation.x), 0, 0, Space.Self);
         }
 
         if (Input.GetKey(KeyCode.W))
@@ -56,12 +66,10 @@ public class UserMovement : MonoBehaviour
             //Debug.Log(Mathf.Clamp(tempFloat, minHeight, maxHeight));
             if (Mathf.Clamp(tempFloat, minHeight, maxHeight) <maxHeight)
             {
-                tempFloat = ship.transform.localPosition.x + speed * Time.deltaTime;
+                tempFloat = ship.transform.localPosition.x + speed * Time.deltaTime*norm;
                 ship.transform.localPosition = new Vector3(Mathf.Clamp(tempFloat, minHeight, maxHeight), ship.transform.localPosition.y, ship.transform.localPosition.z);
                 holder.transform.Rotate(0, 0, -1, Space.Self);
             }
-
-
         }
 
         if (Input.GetKey(KeyCode.S))
@@ -69,11 +77,10 @@ public class UserMovement : MonoBehaviour
             //Debug.Log(Mathf.Clamp(tempFloat, minHeight, maxHeight));
             if (Mathf.Clamp(tempFloat, minHeight, maxHeight) > minHeight)
             {
-                tempFloat = ship.transform.localPosition.x - speed * Time.deltaTime;
+                tempFloat = ship.transform.localPosition.x - speed * Time.deltaTime*norm;
                 ship.transform.localPosition = new Vector3(Mathf.Clamp(tempFloat, minHeight, maxHeight), ship.transform.localPosition.y, ship.transform.localPosition.z);
                 holder.transform.Rotate(0, 0, 1, Space.Self);
             }
-
         }
 
 

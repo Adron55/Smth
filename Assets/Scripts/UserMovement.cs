@@ -4,9 +4,10 @@ public class UserMovement : MonoBehaviour
 {
     public GameObject center;
     public GameObject ship;
+    public GameObject holder;
 
 
-    public float maxHeight = 20, minHeight = 10;
+    public float maxHeight = 18, minHeight = 10;
 
 
     public float speed = 0.1f;
@@ -32,23 +33,47 @@ public class UserMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             center.transform.eulerAngles += new Vector3(0, -speed, 0) * Time.deltaTime;
+            if (holder.transform.localRotation.x <0.1f)
+            {
+                holder.transform.Rotate(1, 0, 0, Space.Self);
+            }
         }
 
         if (Input.GetKey(KeyCode.A))
         {
             center.transform.eulerAngles += new Vector3(0, speed, 0) * Time.deltaTime;
+            Debug.Log("rOTATION"+holder.transform.localRotation.x);
+            if(holder.transform.localRotation.x > -0.1f)
+            {
+                holder.transform.Rotate(-1, 0, 0, Space.Self);
+
+            }
+
         }
 
         if (Input.GetKey(KeyCode.W))
         {
-            tempFloat = ship.transform.localPosition.x + speed * Time.deltaTime;
-            ship.transform.localPosition = new Vector3(Mathf.Clamp(tempFloat, minHeight, maxHeight), ship.transform.localPosition.y, ship.transform.localPosition.z);
+            //Debug.Log(Mathf.Clamp(tempFloat, minHeight, maxHeight));
+            if (Mathf.Clamp(tempFloat, minHeight, maxHeight) <maxHeight)
+            {
+                tempFloat = ship.transform.localPosition.x + speed * Time.deltaTime;
+                ship.transform.localPosition = new Vector3(Mathf.Clamp(tempFloat, minHeight, maxHeight), ship.transform.localPosition.y, ship.transform.localPosition.z);
+                holder.transform.Rotate(0, 0, -1, Space.Self);
+            }
+
+
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            tempFloat = ship.transform.localPosition.x - speed * Time.deltaTime;
-            ship.transform.localPosition = new Vector3(Mathf.Clamp(tempFloat, minHeight, maxHeight), ship.transform.localPosition.y, ship.transform.localPosition.z);
+            //Debug.Log(Mathf.Clamp(tempFloat, minHeight, maxHeight));
+            if (Mathf.Clamp(tempFloat, minHeight, maxHeight) > minHeight)
+            {
+                tempFloat = ship.transform.localPosition.x - speed * Time.deltaTime;
+                ship.transform.localPosition = new Vector3(Mathf.Clamp(tempFloat, minHeight, maxHeight), ship.transform.localPosition.y, ship.transform.localPosition.z);
+                holder.transform.Rotate(0, 0, 1, Space.Self);
+            }
+
         }
 
 

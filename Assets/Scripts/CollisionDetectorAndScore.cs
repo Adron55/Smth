@@ -7,7 +7,7 @@ public class CollisionDetectorAndScore : MonoBehaviour
 {
     public GameObject managerGame;
     public TextMeshProUGUI textMeshScore;
-
+    public AudioSource audio;
     
     [SerializeField]
     private float speedOfOpening = 0.1f;
@@ -31,6 +31,7 @@ public class CollisionDetectorAndScore : MonoBehaviour
         scores += collision.collider.gameObject.GetComponent<debrisDatas>().massOfDebris;
         collision.collider.gameObject.SetActive(false);
         textMeshScore.text = scores.ToString();
+        audio.Play();
         managerGame.GetComponent<SpawnDebrisModels>().callObjectFromPool();
     }
 

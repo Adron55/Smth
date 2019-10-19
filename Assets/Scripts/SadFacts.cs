@@ -29,10 +29,10 @@ public class SadFacts : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        panel.SetActive(true);
+        //panel.SetActive(true);
 
-        tempT = 0;
-        fact.text = facts[Random.Range(0, facts.Count - 1)];
+        tempT = delay - 5;
+        //fact.text = facts[Random.Range(0, facts.Count - 1)];
     }
 
 

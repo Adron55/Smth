@@ -8,11 +8,12 @@ using System;
 public class SpawnDebrisModels : MonoBehaviour
 {
     public List<GameObject> debrises;
-    public List<List<GameObject>> debrisInstantiated;
+    public List<GameObject> debrisInstantiated;
 
     public float respawnTime = 1.0f;
     private Vector2 screenBounds;
-    int indexInst =0,indexDeb =0;
+    int indexDeb =0;
+    private int lastIndexOfPos=0;
     float x = 0.0f, y=0.0f, z=0.0f;
     bool f = false;
     private float myradius = 15f; // globe ball radius
@@ -24,18 +25,7 @@ public class SpawnDebrisModels : MonoBehaviour
     void Start()
     {
         jsonDataToPosComp = new List<JsonDataToPos>();
-
-
-        debrisInstantiated = new List<List<GameObject>>();
-        debrisInstantiated.Add(new List<GameObject>());//0
-        debrisInstantiated.Add(new List<GameObject>());//1
-        debrisInstantiated.Add(new List<GameObject>());//2
-        debrisInstantiated.Add(new List<GameObject>());//3
-        debrisInstantiated.Add(new List<GameObject>());//4
-        debrisInstantiated.Add(new List<GameObject>());//5
-        debrisInstantiated.Add(new List<GameObject>());//6
-
-
+        debrisInstantiated = new List<GameObject>();
 
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         //StartCoroutine(asteroidWave());
@@ -56,7 +46,7 @@ public class SpawnDebrisModels : MonoBehaviour
             jsonDataToPos.position = placeObjectToPos((float)Convert.ToDouble(jsonData[i]["lat"].ToString()), (float)Convert.ToDouble(jsonData[i]["lon"].ToString()));
             //if (checkDataDistance(jsonDataToPos.position))
            // {
-                jsonDataToPosComp.Add(jsonDataToPos);
+            jsonDataToPosComp.Add(jsonDataToPos);
           //  }
         }
         //Debug.Log(jsonDataToPosComp.Count);
@@ -90,8 +80,9 @@ public class SpawnDebrisModels : MonoBehaviour
 
             a.transform.localScale = debrises[indexDeb].GetComponent<debrisDatas>().scaleVector;
             a.transform.SetPositionAndRotation(v3Pos, UnityEngine.Random.rotationUniform);
-           // Debug.Log(Vector3.Distance(Vector3.zero, a.transform.position));
             a.SetActive(true);
+            debrisInstantiated.Add(a);
+            lastIndexOfPos = j;
         }
     }
     
@@ -114,6 +105,21 @@ public class SpawnDebrisModels : MonoBehaviour
         return new Vector3(xPos * scaleValueOfCoordinates, yPos * scaleValueOfCoordinates, zPos * scaleValueOfCoordinates);
     }
 
+    public void callObjectFromPool()
+    {
+        
+        for(int i = 0; i < debrisInstantiated.Count; i++)
+        {
+            if (debrisInstantiated[i].active == false)
+            {
+                if (lastIndexOfPos + 1 < jsonDataToPosComp.Count - 1)
+                {
+                    lastIndexOfPos ++;
+                    activateGM(debrisInstantiated[i],jsonDataToPosComp[lastIndexOfPos].position);
+                }
+            }
+        }
+    }
 
     private GameObject spawnEnemy(GameObject game)
     {
@@ -131,44 +137,38 @@ public class SpawnDebrisModels : MonoBehaviour
 
         return a;
     }
-    private void activateGM(GameObject game)
+    private void activateGM(GameObject game,Vector3 vector)
     {
-        x = UnityEngine.Random.Range(0.0f, 1.0f);
-        y = UnityEngine.Random.Range(0.0f, 1.0f);
-        z = UnityEngine.Random.Range(5.0f, 10.0f);
-
-        Vector3 v3Pos = Camera.main.ViewportToWorldPoint(new Vector3(x, y, z));
-
         game.transform.localScale = game.GetComponent<debrisDatas>().scaleVector;
-        game.transform.SetPositionAndRotation(v3Pos, UnityEngine.Random.rotationUniform);
+        game.transform.SetPositionAndRotation(vector, UnityEngine.Random.rotationUniform);
         game.SetActive(true);
     }
-    IEnumerator asteroidWave()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(respawnTime);
-            indexDeb = UnityEngine.Random.Range(0,7);
-            if (debrisInstantiated[indexDeb].Count < 5)
-            {
-                debrisInstantiated[indexDeb].Add(spawnEnemy(debrises[indexDeb]));
-            }
-            else
-            {
-                List<int> indexes=new List<int>();
-                for(int j = 0; j < debrisInstantiated[indexDeb].Count; j++)
-                {
-                    //if (debrisInstantiated[indexDeb][j].active == false)
-                    //{
-                        indexes.Add(j);
-                   // }
-                }
+    //IEnumerator asteroidWave()
+    //{
+    //    while (true)
+    //    {
+    //        yield return new WaitForSeconds(respawnTime);
+    //        indexDeb = UnityEngine.Random.Range(0,7);
+    //        if (debrisInstantiated[indexDeb].Count < 5)
+    //        {
+    //            debrisInstantiated[indexDeb].Add(spawnEnemy(debrises[indexDeb]));
+    //        }
+    //        else
+    //        {
+    //            List<int> indexes=new List<int>();
+    //            for(int j = 0; j < debrisInstantiated[indexDeb].Count; j++)
+    //            {
+    //                //if (debrisInstantiated[indexDeb][j].active == false)
+    //                //{
+    //                    indexes.Add(j);
+    //               // }
+    //            }
                 
-                activateGM(debrisInstantiated[indexDeb][UnityEngine.Random.Range(0, indexes.Count)]);
-            }
+    //            activateGM(debrisInstantiated[indexDeb][UnityEngine.Random.Range(0, indexes.Count)]);
+    //        }
             
-        }
-    }
+    //    }
+    //}
 
     [SerializeField]
     public class JsonDataToPos

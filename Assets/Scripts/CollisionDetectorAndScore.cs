@@ -6,8 +6,22 @@ using TMPro;
 public class CollisionDetectorAndScore : MonoBehaviour
 {
     public TextMeshProUGUI textMeshScore;
+    float timeVal = 0;
+    [SerializeField]
+    private float speedOfOpening = 0.1f;
 
     private int scores=0;
+    
+    private Vector3 vector3Scale = new Vector3(10.66f, 5.620002f, 5.01f);
+
+    private void Update()
+    {
+        timeVal += Time.deltaTime;
+        if (timeVal > 3)
+        {
+            transform.localScale = Vector3.Lerp(transform.localScale, vector3Scale, speedOfOpening * Time.deltaTime);
+        }
+    }
 
     public void OnCollisionEnter(Collision collision)
     {

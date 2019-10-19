@@ -10,6 +10,6 @@ public class debrisDatas : MonoBehaviour
     void OnBecameInvisible()
     {
 
-        transform.gameObject.SetActive(false);
+        //transform.gameObject.SetActive(false);
     }
 }

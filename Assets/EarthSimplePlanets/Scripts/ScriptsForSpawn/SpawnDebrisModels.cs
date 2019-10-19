@@ -32,8 +32,8 @@ public class SpawnDebrisModels : MonoBehaviour
     {
         GameObject a = Instantiate(game) as GameObject;
 
-        x =Random.Range(0f, 0.99f);
-        y= Random.Range(0.75f, 0.99f);
+        x =Random.Range(0.0f, 1.0f);
+        y= Random.Range(0.0f, 1.0f);
         z= Random.Range(10.0f, 20.0f);
 
         Vector3 v3Pos = Camera.main.ViewportToWorldPoint(new Vector3(x, y,z));
@@ -46,9 +46,9 @@ public class SpawnDebrisModels : MonoBehaviour
     }
     private void activateGM(GameObject game)
     {
-        x = Random.Range(0f, 0.99f);
-        y = Random.Range(0.75f, 0.99f);
-        z = Random.Range(10.0f, 20.0f);
+        x = Random.Range(0.0f, 1.0f);
+        y = Random.Range(0.0f, 1.0f);
+        z = Random.Range(5.0f, 10.0f);
 
         Vector3 v3Pos = Camera.main.ViewportToWorldPoint(new Vector3(x, y, z));
 
@@ -71,10 +71,10 @@ public class SpawnDebrisModels : MonoBehaviour
                 List<int> indexes=new List<int>();
                 for(int j = 0; j < debrisInstantiated[indexDeb].Count; j++)
                 {
-                    if (debrisInstantiated[indexDeb][j].active == false)
-                    {
+                    //if (debrisInstantiated[indexDeb][j].active == false)
+                    //{
                         indexes.Add(j);
-                    }
+                   // }
                 }
                 
                 activateGM(debrisInstantiated[indexDeb][Random.Range(0, indexes.Count)]);
@@ -82,4 +82,5 @@ public class SpawnDebrisModels : MonoBehaviour
             
         }
     }
+
 }

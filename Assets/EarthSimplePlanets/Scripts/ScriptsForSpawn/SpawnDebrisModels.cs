@@ -59,7 +59,7 @@ public class SpawnDebrisModels : MonoBehaviour
                 jsonDataToPosComp.Add(jsonDataToPos);
           //  }
         }
-        Debug.Log(jsonDataToPosComp.Count);
+        //Debug.Log(jsonDataToPosComp.Count);
         f = true;
         inst();
 

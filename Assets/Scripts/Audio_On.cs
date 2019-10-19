@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Audio_On : MonoBehaviour
 {
+    AudioSource audioData;
 
     // Update is called once per frame
     void Update()
@@ -12,7 +13,8 @@ public class Audio_On : MonoBehaviour
         if (obj2.activeSelf)
         {
             var obj3 = GameObject.Find("Music");
-            obj3.GetComponent<AudioSource>().Pause();
+            audioData = obj3.GetComponent<AudioSource>();
+            audioData.Stop();
         }
 
     }

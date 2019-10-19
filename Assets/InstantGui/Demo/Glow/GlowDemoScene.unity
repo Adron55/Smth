@@ -419,6 +419,7 @@ MonoBehaviour:
     right: 823
     top: 120
     bottom: 470
+
     isStyle: 0
   relative:
     left: 0
@@ -437,6 +438,7 @@ MonoBehaviour:
     right: 793
     top: 260
     bottom: 310
+
     isStyle: 0
   layerOffset: 1
   lockPosition: 0
@@ -664,8 +666,9 @@ MonoBehaviour:
   parentpos:
     left: 0
     right: 1366
+
     top: 0
-    bottom: 639
+    bottom: 768
     isStyle: 0
   relative:
     left: 0
@@ -682,8 +685,9 @@ MonoBehaviour:
   absolute:
     left: 0
     right: 1366
+
     top: 0
-    bottom: 639
+    bottom: 768
     isStyle: 0
   layerOffset: 1
   lockPosition: 1
@@ -693,6 +697,7 @@ MonoBehaviour:
   pointedOnBackground: 0
   pointedTime: 0
   unpointedTime: 281.24475
+
   disabled: 0
   activated: 0
   pressed: 0
@@ -1062,6 +1067,7 @@ GUITexture:
     serializedVersion: 2
     x: 583
     y: 389
+
     width: 210
     height: 50
   m_LeftBorder: 40
@@ -1689,6 +1695,7 @@ GUIText:
   m_Anchor: 0
   m_Alignment: 0
   m_PixelOffset: {x: 565, y: 498}
+
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: debe8a50832fec8408b216ac64b774a7, type: 3}
@@ -2256,6 +2263,7 @@ GUIText:
   m_Anchor: 4
   m_Alignment: 0
   m_PixelOffset: {x: 688, y: 412}
+
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: debe8a50832fec8408b216ac64b774a7, type: 3}
@@ -2390,6 +2398,7 @@ MonoBehaviour:
     right: 793
     top: 380
     bottom: 430
+
     isStyle: 0
   layerOffset: 1
   lockPosition: 0
@@ -2707,6 +2716,7 @@ GUITexture:
     serializedVersion: 2
     x: 583
     y: 209
+
     width: 210
     height: 50
   m_LeftBorder: 40
@@ -2757,6 +2767,7 @@ GUIText:
   m_Anchor: 4
   m_Alignment: 0
   m_PixelOffset: {x: 688, y: 352}
+
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: debe8a50832fec8408b216ac64b774a7, type: 3}
@@ -3092,7 +3103,7 @@ GUITexture:
   m_PixelInset:
     serializedVersion: 2
     x: -182
-    y: -385
+    y: -256
     width: 2048
     height: 1024
   m_LeftBorder: 660
@@ -3634,7 +3645,7 @@ MonoBehaviour:
     left: 0
     right: 1366
     top: 0
-    bottom: 639
+    bottom: 768
     isStyle: 0
   relative:
     left: 50
@@ -3829,6 +3840,7 @@ MonoBehaviour:
     right: 823
     top: 120
     bottom: 470
+
     isStyle: 0
   relative:
     left: 0
@@ -3847,6 +3859,7 @@ MonoBehaviour:
     right: 793
     top: 200
     bottom: 250
+
     isStyle: 0
   layerOffset: 1
   lockPosition: 0
@@ -4575,6 +4588,7 @@ MonoBehaviour:
     right: 823
     top: 120
     bottom: 470
+
     isStyle: 0
   relative:
     left: 0
@@ -4593,6 +4607,7 @@ MonoBehaviour:
     right: 793
     top: 320
     bottom: 370
+
     isStyle: 0
   layerOffset: 1
   lockPosition: 0
@@ -4916,6 +4931,7 @@ GUIText:
   m_Anchor: 4
   m_Alignment: 0
   m_PixelOffset: {x: 688, y: 232}
+
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: debe8a50832fec8408b216ac64b774a7, type: 3}
@@ -6447,6 +6463,7 @@ GUIText:
   m_Anchor: 4
   m_Alignment: 0
   m_PixelOffset: {x: 688, y: 292}
+
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: debe8a50832fec8408b216ac64b774a7, type: 3}
@@ -6748,8 +6765,9 @@ MonoBehaviour:
   parentpos:
     left: 0
     right: 1366
+
     top: 0
-    bottom: 639
+    bottom: 768
     isStyle: 0
   relative:
     left: 0
@@ -6777,6 +6795,7 @@ MonoBehaviour:
   pointedOnBackground: 0
   pointedTime: 0
   unpointedTime: 2.7266667
+
   disabled: 0
   activated: 0
   pressed: 0
@@ -7423,8 +7442,10 @@ GUITexture:
   m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
   m_PixelInset:
     serializedVersion: 2
+
     x: 543
     y: 169
+
     width: 280
     height: 350
   m_LeftBorder: 81
@@ -7836,6 +7857,7 @@ GUITexture:
     serializedVersion: 2
     x: 583
     y: 269
+
     width: 210
     height: 50
   m_LeftBorder: 40

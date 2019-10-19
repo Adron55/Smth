@@ -62,6 +62,11 @@ public class SpawnDebrisModels : MonoBehaviour
         return jsonDataToPosComp;
     }
 
+    public void checkDataDistance()
+    {
+
+    }
+
     private void inst()
     {
         for (int j = 0; j < jsonDataToPosComp.Count-200; j++)
@@ -74,7 +79,7 @@ public class SpawnDebrisModels : MonoBehaviour
 
             a.transform.localScale = debrises[indexDeb].GetComponent<debrisDatas>().scaleVector;
             a.transform.SetPositionAndRotation(v3Pos, UnityEngine.Random.rotationUniform);
-            Debug.Log(Vector3.Distance(Vector3.zero, a.transform.position));
+           // Debug.Log(Vector3.Distance(Vector3.zero, a.transform.position));
             a.SetActive(true);
         }
     }

@@ -23,7 +23,6 @@ public class UserMovement : MonoBehaviour
     private void Start()
     {
         moveVec = new Vector3(0, 0, defaultMoveSpeed);
-        Debug.Log(holder.transform.localRotation.x);
     }
 
 
@@ -41,7 +40,7 @@ public class UserMovement : MonoBehaviour
         }
         else if (holder.transform.localRotation.x > 0f)
         {
-            Debug.Log("here");
+            //Debug.Log("here");
             holder.transform.Rotate(Mathf.Min(-1, -holder.transform.localRotation.x), 0, 0, Space.Self);
         }
         
@@ -57,7 +56,7 @@ public class UserMovement : MonoBehaviour
         }
         else if (holder.transform.localRotation.x < 0f)
         {
-            Debug.Log("here");
+            //Debug.Log("here");
             holder.transform.Rotate(Mathf.Max(1, -holder.transform.localRotation.x), 0, 0, Space.Self);
         }
 
@@ -68,7 +67,7 @@ public class UserMovement : MonoBehaviour
             {
                 tempFloat = ship.transform.localPosition.x + speed * Time.deltaTime*norm;
                 ship.transform.localPosition = new Vector3(Mathf.Clamp(tempFloat, minHeight, maxHeight), ship.transform.localPosition.y, ship.transform.localPosition.z);
-                holder.transform.Rotate(0, 0, -1, Space.Self);
+               // holder.transform.Rotate(0, 0, -1, Space.Self);
             }
         }
 
@@ -79,7 +78,7 @@ public class UserMovement : MonoBehaviour
             {
                 tempFloat = ship.transform.localPosition.x - speed * Time.deltaTime*norm;
                 ship.transform.localPosition = new Vector3(Mathf.Clamp(tempFloat, minHeight, maxHeight), ship.transform.localPosition.y, ship.transform.localPosition.z);
-                holder.transform.Rotate(0, 0, 1, Space.Self);
+               // holder.transform.Rotate(0, 0, 1, Space.Self);
                 //Debug.Log(Vector3.Distance(Vector3.zero, holder.transform.position));
             }
         }

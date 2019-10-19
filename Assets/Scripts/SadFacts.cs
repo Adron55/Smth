@@ -9,7 +9,7 @@ public class SadFacts : MonoBehaviour
     public TMP_Text fact;
     public GameObject panel;
     public float delay;
-
+    public AudioClip factSound;
     float tempT;
     int tempInd;
 
@@ -25,6 +25,7 @@ public class SadFacts : MonoBehaviour
 
         if(tempT >= delay)
         {
+            GetComponent<AudioSource>().PlayOneShot(factSound);
             panel.SetActive(true);
 
             tempT = 0;

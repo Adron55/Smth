@@ -49,7 +49,7 @@ public class UserMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             center.transform.eulerAngles += new Vector3(0, speed, 0) * Time.deltaTime;
-            Debug.Log("rOTATION"+holder.transform.localRotation.x);
+            //Debug.Log("rOTATION"+holder.transform.localRotation.x);
             if(holder.transform.localRotation.x > -0.1f)
             {
                 holder.transform.Rotate(-1, 0, 0, Space.Self);
@@ -80,6 +80,7 @@ public class UserMovement : MonoBehaviour
                 tempFloat = ship.transform.localPosition.x - speed * Time.deltaTime*norm;
                 ship.transform.localPosition = new Vector3(Mathf.Clamp(tempFloat, minHeight, maxHeight), ship.transform.localPosition.y, ship.transform.localPosition.z);
                 holder.transform.Rotate(0, 0, 1, Space.Self);
+                //Debug.Log(Vector3.Distance(Vector3.zero, holder.transform.position));
             }
         }
 

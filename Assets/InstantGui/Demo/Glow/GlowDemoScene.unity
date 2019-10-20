@@ -415,10 +415,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentpos:
-    left: 543
-    right: 823
-    top: 120
-    bottom: 470
+    left: 572
+    right: 852
+    top: 136
+    bottom: 486
     isStyle: 0
   relative:
     left: 0
@@ -433,10 +433,10 @@ MonoBehaviour:
     bottom: 240
     isStyle: 0
   absolute:
-    left: 583
-    right: 793
-    top: 260
-    bottom: 310
+    left: 612
+    right: 822
+    top: 276
+    bottom: 326
     isStyle: 0
   layerOffset: 1
   lockPosition: 0
@@ -643,6 +643,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1766810483}
+  - {fileID: 1417138481}
   - {fileID: 773924337}
   - {fileID: 254190541}
   - {fileID: 1774075600}
@@ -664,9 +665,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentpos:
     left: 0
-    right: 1366
+    right: 1423
     top: 0
-    bottom: 639
+    bottom: 672
     isStyle: 0
   relative:
     left: 0
@@ -682,9 +683,9 @@ MonoBehaviour:
     isStyle: 0
   absolute:
     left: 0
-    right: 1366
+    right: 1423
     top: 0
-    bottom: 639
+    bottom: 672
     isStyle: 0
   layerOffset: 1
   lockPosition: 1
@@ -693,7 +694,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 393.23737
+  unpointedTime: 848.06305
   disabled: 0
   activated: 0
   pressed: 0
@@ -784,14 +785,16 @@ MonoBehaviour:
   forceAlign: 0
   childElements:
   - {fileID: 1766810484}
+  - {fileID: 1417138482}
   - {fileID: 773924338}
   childTfms:
   - {fileID: 1766810483}
+  - {fileID: 1417138481}
   - {fileID: 773924337}
   - {fileID: 254190541}
   - {fileID: 1774075600}
   - {fileID: 380390679}
-  childTfmsActive: 0101000000
+  childTfmsActive: 010101000000
   deleteChildren: 0
   guiLinkText: 1
   guiEditor: 0
@@ -1062,8 +1065,8 @@ GUITexture:
   m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
   m_PixelInset:
     serializedVersion: 2
-    x: 583
-    y: 389
+    x: 612
+    y: 406
     width: 210
     height: 50
   m_LeftBorder: 40
@@ -1206,7 +1209,7 @@ Transform:
   m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 147540414}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &254190542
 AudioSource:
@@ -1617,7 +1620,7 @@ Transform:
   - {fileID: 689513438}
   - {fileID: 1594011678}
   m_Father: {fileID: 147540414}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &380390680
 MonoBehaviour:
@@ -1914,7 +1917,7 @@ GUIText:
   m_Text: Main Menu
   m_Anchor: 0
   m_Alignment: 0
-  m_PixelOffset: {x: 565, y: 498}
+  m_PixelOffset: {x: 594, y: 515}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: debe8a50832fec8408b216ac64b774a7, type: 3}
@@ -2578,7 +2581,7 @@ GUIText:
   m_Text: Start New
   m_Anchor: 4
   m_Alignment: 0
-  m_PixelOffset: {x: 688, y: 412}
+  m_PixelOffset: {x: 717, y: 429}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: debe8a50832fec8408b216ac64b774a7, type: 3}
@@ -2691,10 +2694,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentpos:
-    left: 543
-    right: 823
-    top: 120
-    bottom: 470
+    left: 572
+    right: 852
+    top: 136
+    bottom: 486
     isStyle: 0
   relative:
     left: 0
@@ -2709,10 +2712,10 @@ MonoBehaviour:
     bottom: 360
     isStyle: 0
   absolute:
-    left: 583
-    right: 793
-    top: 380
-    bottom: 430
+    left: 612
+    right: 822
+    top: 396
+    bottom: 446
     isStyle: 0
   layerOffset: 1
   lockPosition: 0
@@ -3028,8 +3031,8 @@ GUITexture:
   m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
   m_PixelInset:
     serializedVersion: 2
-    x: 583
-    y: 209
+    x: 612
+    y: 226
     width: 210
     height: 50
   m_LeftBorder: 40
@@ -3079,7 +3082,7 @@ GUIText:
   m_Text: Settings
   m_Anchor: 4
   m_Alignment: 0
-  m_PixelOffset: {x: 688, y: 352}
+  m_PixelOffset: {x: 717, y: 369}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: debe8a50832fec8408b216ac64b774a7, type: 3}
@@ -3415,7 +3418,7 @@ GUITexture:
   m_PixelInset:
     serializedVersion: 2
     x: -182
-    y: -385
+    y: -352
     width: 2048
     height: 1024
   m_LeftBorder: 660
@@ -3939,7 +3942,7 @@ Transform:
   - {fileID: 1233892550}
   - {fileID: 1848486526}
   m_Father: {fileID: 147540414}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &773924338
 MonoBehaviour:
@@ -3955,9 +3958,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentpos:
     left: 0
-    right: 1366
+    right: 1423
     top: 0
-    bottom: 639
+    bottom: 672
     isStyle: 0
   relative:
     left: 50
@@ -3972,10 +3975,10 @@ MonoBehaviour:
     bottom: 150
     isStyle: 0
   absolute:
-    left: 543
-    right: 823
-    top: 120
-    bottom: 470
+    left: 572
+    right: 852
+    top: 136
+    bottom: 486
     isStyle: 0
   layerOffset: 1
   lockPosition: 0
@@ -3984,7 +3987,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 320.37418
+  unpointedTime: 76.436104
   disabled: 0
   activated: 0
   pressed: 0
@@ -4148,10 +4151,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentpos:
-    left: 543
-    right: 823
-    top: 120
-    bottom: 470
+    left: 572
+    right: 852
+    top: 136
+    bottom: 486
     isStyle: 0
   relative:
     left: 0
@@ -4166,10 +4169,10 @@ MonoBehaviour:
     bottom: 180
     isStyle: 0
   absolute:
-    left: 583
-    right: 793
-    top: 200
-    bottom: 250
+    left: 612
+    right: 822
+    top: 216
+    bottom: 266
     isStyle: 0
   layerOffset: 1
   lockPosition: 0
@@ -4481,6 +4484,57 @@ MonoBehaviour:
     messageGameObject: {fileID: 0}
     messageInEditor: 0
     guiDraw: 1
+--- !u!1 &810739672
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 810739673}
+  - component: {fileID: 810739674}
+  m_Layer: 0
+  m_Name: Element_mainTexture
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &810739673
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810739672}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.7}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1417138481}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!131 &810739674
+GUITexture:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810739672}
+  m_Enabled: 1
+  m_Texture: {fileID: 2800000, guid: b2c747d96a306cb489ef1f58727e5369, type: 3}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+  m_PixelInset:
+    serializedVersion: 2
+    x: -65
+    y: -66.5
+    width: 398
+    height: 199
+  m_LeftBorder: 0
+  m_RightBorder: 0
+  m_TopBorder: 0
+  m_BottomBorder: 0
 --- !u!1 &871666371
 GameObject:
   m_ObjectHideFlags: 0
@@ -4895,10 +4949,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentpos:
-    left: 543
-    right: 823
-    top: 120
-    bottom: 470
+    left: 572
+    right: 852
+    top: 136
+    bottom: 486
     isStyle: 0
   relative:
     left: 0
@@ -4913,10 +4967,10 @@ MonoBehaviour:
     bottom: 300
     isStyle: 0
   absolute:
-    left: 583
-    right: 793
-    top: 320
-    bottom: 370
+    left: 612
+    right: 822
+    top: 336
+    bottom: 386
     isStyle: 0
   layerOffset: 1
   lockPosition: 0
@@ -5239,7 +5293,7 @@ GUIText:
   m_Text: Quit
   m_Anchor: 4
   m_Alignment: 0
-  m_PixelOffset: {x: 688, y: 232}
+  m_PixelOffset: {x: 717, y: 249}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: debe8a50832fec8408b216ac64b774a7, type: 3}
@@ -5522,8 +5576,8 @@ GUITexture:
   m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
   m_PixelInset:
     serializedVersion: 2
-    x: 583
-    y: 329
+    x: 612
+    y: 346
     width: 210
     height: 50
   m_LeftBorder: 40
@@ -5980,6 +6034,183 @@ MonoBehaviour:
   diamond: {fileID: 648751005}
   incrementButton: {fileID: 1257116542}
   decrementButton: {fileID: 871666373}
+--- !u!1 &1417138480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1417138481}
+  - component: {fileID: 1417138482}
+  m_Layer: 0
+  m_Name: Logo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1417138481
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417138480}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.7}
+  m_LocalScale: {x: 0, y: 0, z: 1}
+  m_Children:
+  - {fileID: 810739673}
+  m_Father: {fileID: 147540414}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1417138482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417138480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d83cc1d4a347eff4caa625c56f2e7474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentpos:
+    left: 0
+    right: 1423
+    top: 0
+    bottom: 672
+    isStyle: 0
+  relative:
+    left: 6
+    right: 22
+    top: 98
+    bottom: 0
+    isStyle: 0
+  offset:
+    left: -150
+    right: 20
+    top: -20
+    bottom: 150
+    isStyle: 0
+  absolute:
+    left: -65
+    right: 333
+    top: 639
+    bottom: 639
+    isStyle: 0
+  layerOffset: 0.7
+  lockPosition: 1
+  dynamic: 1
+  editable: 1
+  pointed: 0
+  pointedOnBackground: 0
+  pointedTime: 0
+  unpointedTime: 71.49499
+  disabled: 0
+  activated: 0
+  pressed: 0
+  check: 0
+  instant: 1
+  password: 0
+  text: 
+  mainGuiTexture: {fileID: 810739674}
+  blendGuiTexture: {fileID: 0}
+  guiTexts: []
+  textMaterial: {fileID: 0}
+  textEffectMaterial: {fileID: 0}
+  styleSet: {fileID: 11400000, guid: fa3762748a9cff6429fea97cc8bfb1ac, type: 2}
+  customStyle: 1
+  styleName: 
+  style:
+    name: 
+    show: 0
+    fixedSize: 0
+    fixedWidth: 0
+    fixedHeight: 0
+    fixedWidthSize: 1400
+    fixedHeightSize: 700
+    proportional: 1
+    proportionalAspect: 2
+    main:
+      enabled: 1
+      texture: {fileID: 2800000, guid: b2c747d96a306cb489ef1f58727e5369, type: 3}
+      textOffsetX: 0
+      textOffsetY: 0
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      guiBorders: 0
+    pointed:
+      enabled: 0
+      texture: {fileID: 0}
+      textOffsetX: 0
+      textOffsetY: 0
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      guiBorders: 0
+    active:
+      enabled: 0
+      texture: {fileID: 0}
+      textOffsetX: 0
+      textOffsetY: 0
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      guiBorders: 0
+    disabled:
+      enabled: 0
+      texture: {fileID: 0}
+      textOffsetX: 0
+      textOffsetY: 0
+      textColor: {r: 1, g: 1, b: 1, a: 1}
+      guiBorders: 0
+    borders:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    blendSpeed: 2
+    font: {fileID: 0}
+    oldFont: {fileID: 0}
+    fontSize: 0
+    textAligment: 0
+    textOffsetX: 0
+    textOffsetY: 0
+    textEffect: 0
+    textEffectSize: 1
+    textEffectColor: {r: 0, g: 0, b: 0, a: 0}
+    relative:
+      left: 50
+      right: 50
+      top: 50
+      bottom: 50
+      isStyle: 1
+    offset:
+      left: -20
+      right: 20
+      top: -20
+      bottom: 20
+      isStyle: 1
+    layerOffset: 0
+    pointOffset:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+  currentFont: {fileID: 0}
+  forceAlign: 0
+  childElements: []
+  childTfms:
+  - {fileID: 810739673}
+  childTfmsActive: 01
+  deleteChildren: 0
+  guiLinkText: 1
+  guiEditor: 0
+  guiStyle: 1
+  guiPosition: 1
+  guiAttributes: 0
+  guiElementProps: 0
+  guiType: 0
+  useStylePlacement: 0
 --- !u!1 &1429381860
 GameObject:
   m_ObjectHideFlags: 0
@@ -6770,7 +7001,7 @@ GUIText:
   m_Text: Credits
   m_Anchor: 4
   m_Alignment: 0
-  m_PixelOffset: {x: 688, y: 292}
+  m_PixelOffset: {x: 717, y: 309}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: debe8a50832fec8408b216ac64b774a7, type: 3}
@@ -7071,9 +7302,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentpos:
     left: 0
-    right: 1366
+    right: 1423
     top: 0
-    bottom: 639
+    bottom: 672
     isStyle: 0
   relative:
     left: 0
@@ -7100,7 +7331,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 36.358665
+  unpointedTime: 3.5123158
   disabled: 0
   activated: 0
   pressed: 0
@@ -7237,7 +7468,7 @@ Transform:
   - {fileID: 1898980342}
   - {fileID: 1524101634}
   m_Father: {fileID: 147540414}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1774075601
 MonoBehaviour:
@@ -7836,8 +8067,8 @@ GUITexture:
   m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
   m_PixelInset:
     serializedVersion: 2
-    x: 543
-    y: 169
+    x: 572
+    y: 186
     width: 280
     height: 350
   m_LeftBorder: 81
@@ -8247,8 +8478,8 @@ GUITexture:
   m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
   m_PixelInset:
     serializedVersion: 2
-    x: 583
-    y: 269
+    x: 612
+    y: 286
     width: 210
     height: 50
   m_LeftBorder: 40

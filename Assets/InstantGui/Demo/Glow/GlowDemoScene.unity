@@ -693,7 +693,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 355.1912
+  unpointedTime: 393.23737
   disabled: 0
   activated: 0
   pressed: 0
@@ -3984,7 +3984,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 282.328
+  unpointedTime: 320.37418
   disabled: 0
   activated: 0
   pressed: 0
@@ -7100,7 +7100,7 @@ MonoBehaviour:
   pointed: 0
   pointedOnBackground: 0
   pointedTime: 0
-  unpointedTime: 69.707146
+  unpointedTime: 36.358665
   disabled: 0
   activated: 0
   pressed: 0
@@ -7731,20 +7731,12 @@ MonoBehaviour:
   guiElementProps: 1
   guiType: 0
   useStylePlacement: 0
-  rawText: "InstantGUI is a GUI display system and GUI editor. It allows to create
-    full featured interface system for the game with maximum convenience and as fast
-    as prototyping it!\r\n\r\nGUI creation is done with no scripting. Now an artist
-    or game designer can create interface the way they like. Of course there a script
-    interactions with GUI which are done with events (messaging) and direct get/set
-    element parameters.\r\nNo special additional cameras, scene planes, gizmos and
-    helpers. InstantGUI forms a simple and logical hierarchy of elements \u2013 and
-    only elements \u2013 under one root object.\r\nAll the work is done directly in
-    a Game view. No need to place elements in a Scene view looking at result in a
-    Game view \u2013 like in other GUI plugins. Game view is your only canvas!\r\nWhat
-    You See Is What You Get: your in-game interface will look and act directly as
-    you see it in on your canvas.\r\nInstantGUI comes with demo GUI themes that has
-    graphics for all basic interface elements. Feel free to use theme for demo purposes,
-    prototyping or in a final product."
+  rawText: "This demo game developed for Space Apps Hackathon and purpose of this
+    game inform people about Cosmos junks\n\nYour Task in game is that you should
+    collect debrises(space junks), clean our space, increase your score and learn
+    sadfacts about space . \nEvery debris in our game has special mass which will
+    increase your CDM points. CDM is abbreviation of Collected Debris Mass\n\nThere
+    is a good chance that you can see Tesla Roadster which Elon musk send to space.\n"
   firstLine: 0
   widthAdjust: 50
   heightAdjust: 20
